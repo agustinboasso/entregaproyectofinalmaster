@@ -1,0 +1,616 @@
+@import "contenedores";
+@import "variables";
+
+/*MIXIN Y BUCLE*/
+ @mixin bordeColor($tipo, $ancho, $color) {
+    
+    border-width: $ancho;
+    border-style: $tipo;
+    border-color: $color;
+}
+
+
+@if $rellenoNavMenu=="si" {
+    
+    @for $i from 1 through 7 {
+        .navMenuColor#{$i} {
+            background-color: map-get($mapaColores, $i);
+        }
+    }
+}
+
+@else if $rellenoNavMenu=="no" {
+    
+    @each $numero,
+    $color in $mapaColores {
+        .navMenuColor#{$numero} {
+            @include bordeColor(double, 10px, $color);
+        }
+    }
+} 
+
+
+/*BIO*/
+
+.navMenuBio li, .articleLinksBio {
+    text-decoration: none;
+    list-style-type: none;
+    font-family:akira;
+    color: yellow;
+    text-transform: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.navMenuBio{
+    float: left;
+    left: 370px;
+}
+
+.bodyBio, .bodyContact{
+    background-image: url('../media/DSC3220.webp');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffff;
+}
+
+/*imagen bio*/
+/*imagen bio*/
+
+.articleLinksBio li{
+    display: inline-block;
+    padding: 10px;
+    left: 0px;
+}
+
+.articleBio{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#articleBio1, #articleBio3, #articleBio4{
+    border:3px ;
+    border-color: none;
+    border-style: none;
+    width: auto;
+    height: auto;
+    margin: 10px 20px 30px 40px;
+    padding: 10px 20px 30px 40px;
+}
+
+#colorRed{
+    color: coral;
+    font-family: akira;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    #imageBio, #imageBio2,#articleBio1, #articleBio3, #articleBio4,.articleLinksBio{
+        justify-content: center;
+    }
+}
+
+.navbar-nav, .nav-link{
+    font-family: akira;
+    color: yellow;
+    text-align: center;
+    
+}
+
+.allright{
+
+        font-size: small;
+}
+
+
+#mainPics {
+    grid-area: mainPics;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto;
+    grid-template-rows: 5% auto auto 3% 5%;
+    grid-template-areas: "header" "picsOrder" "socialMedia" "footer";
+  }
+
+  #carouselExampleControls, .row{
+    padding: 15px;
+  }
+
+
+  .bodyPics, .bodyIndex, .bodyVideo, .bodyBio, .bodyContact, .bodyAlbums, .bodyPatio, .bodyGrito, .bodyKharon, .bodyVol1 {
+    background-image: url(../media/fondoalta2.webp);
+  }
+
+  .bodyAlbums{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .albumart{
+    grid-area: albumArt;
+  }
+  .albumart div{
+    border: 3px;
+    border-color: white;
+  }
+  .bodyAlbums{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 25% auto 3% 5%;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:"header header" "albumbArt albumArt" "socialMedia socialMedia" "footer footer";
+
+}
+
+.albumart{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    column-gap: 15px;
+    row-gap: 15px;
+    align-items: end;
+    justify-items: end;
+}
+
+.albumart{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .bodyAlbums{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25% auto auto auto auto 3% 5%;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas: "header" "albumArt" "albumArt" "albumArt" "albumArt" "socialMedia" "footer";
+    }
+
+    .albumart{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        align-items: end;
+        justify-items: end;
+    }
+}
+
+    @media screen and (min-width: 1200px)   {
+
+        .bodyAlbums{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 25% auto 3% 5%;
+            column-gap: 10px;
+            row-gap: 10px;
+            grid-template-areas:"header header" "albumbArt albumArt" "socialMedia socialMedia" "footer footer";
+        
+        }
+        
+        .albumart{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            column-gap: 15px;
+            row-gap: 15px;
+            align-items: end;
+            justify-items: end;
+        }
+    
+      
+      
+    } 
+
+
+.albumart{
+    margin-left: 45%;
+    column-gap: 25px;
+}
+
+
+
+.dropdown-menu{
+    background: none;
+    border: none;
+    text-align: center;    
+}
+
+.dropdown-item{
+    color: yellow;
+}
+
+.dropdown-item:hover{
+    background: none;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: none;
+    color: white;
+}
+
+.navbar-toggler-icon:hover{
+    background-color: none;
+    color: white;
+
+}
+
+.navbar-nav:hover{
+    background-color: none;
+    color: white;
+}
+
+.musicos li{
+    list-style: none;
+}
+
+.navbar-toggler, .navbar-toggler-icon, .navbar-nav, #navbarNav  {
+    color: yellow;
+    border-color: yellow;
+    
+}
+
+#articleBio2 {
+    margin-left: 3%;
+}
+
+#articleBio105 {
+    margin-left: 7%;
+}
+
+.footer{
+    font-family: akira;
+    color: rgb(236, 236, 236);
+    
+}
+
+.bodyContact{
+    grid-area: bodyContact;
+}
+
+#contacto{
+    grid-area: contacto;
+}
+.bodyVideo{
+    grid-area: bodyVideo;
+}
+
+.videocarrusel{
+    grid-area: videocarrusel;
+}
+
+
+.bodyBio{
+    grid-area: bodyBio;
+}
+
+#articleBio105{
+    grid-area: article105;
+}
+
+#articleBio1{
+    grid-area: article1;
+}
+
+#articleBio2{
+    grid-area: article2;
+}
+
+#articleBio3{
+    grid-area: article3;
+}
+
+#articleBio4{
+    grid-area: article4;
+}
+
+.socialMedia{
+    grid-area: socialMedia;
+}
+
+.bodyBio{
+  grid-area: mainPics;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto;
+  grid-template-rows: 3% 5% auto auto auto auto auto  2% 1%;
+  grid-template-areas: "header header" "nav nav" "article1 article1" "article105 article105" "article2 article2" "article3 article3" "article4 article4" "socialMedia socialMedia" "footer footer";
+ 
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .bodyBio{
+        grid-area: mainPics;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto;
+        grid-template-rows: 3% 5% auto auto auto auto auto  2% 1%;
+        grid-template-areas: "header" "nav" "article1" "article105" "article2" "article3" "article4" "socialMedia" "footer";
+       
+      }
+
+    
+}
+
+    @media screen and (min-width: 1200px)   {
+        .bodyBio{
+            grid-area: mainPics;
+            display: grid;
+            gap: 1em;
+            grid-template-columns: auto auto;
+            grid-template-rows: 3% 5% auto auto auto auto auto  2% 1%;
+            grid-template-areas: "header header" "nav nav" "article1 article1" "article105 article105" "article2 article2" "article3 article3" "article4 article4" "socialMedia socialMedia" "footer footer";
+           
+          }
+    }
+
+    @media screen and (min-width: 1200px){
+        .bodyBio{
+            grid-area: mainPics;
+            display: grid;
+            gap: 1em;
+            grid-template-columns: auto auto;
+            grid-template-rows: 3% 5% auto auto auto auto auto  2% 1%;
+            grid-template-areas: "header header" "nav nav" "article1 article1" "article105 article105" "article2 article2" "article3 article3" "article4 article4" "socialMedia socialMedia" "footer footer";
+           
+          }
+    }
+
+
+    .bodyVideo{  
+    grid-area: bodyVideo;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+    grid-template-rows:25% auto 2% 1% ;
+    grid-template-areas: "header header" "videocarrusel videocarrusel" "socialMedia socialMedia" "footer footer"
+    }
+   
+    @media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .bodyVideo{    
+    grid-area: bodyVideo;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto;
+    grid-template-rows:35% auto 2% 1% ;
+    grid-template-areas: "header" "videocarrusel" "socialMedia" "footer"
+    }  
+    .footer{
+        margin-bottom: auto;
+    } 
+
+
+} 
+
+
+    .bodyContact{
+    grid-area: bodyContact;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+    grid-template-rows:35% auto auto 2% 1% ;
+    grid-template-areas: "header header" "contactform contactform" "contacto contacto" "socialMedia socialMedia" "footer footer";    
+}
+
+
+
+
+    @media screen and (min-width: 320px) and (max-width: 768px){
+        .bodyContact{
+            grid-area: bodyContact;
+            display: grid;
+            gap: 1em;
+            grid-template-columns: auto;
+            grid-template-rows:35% auto auto 2% 1% ;
+            grid-template-areas: "header" "contactform" "contacto" "socialMedia" "footer";    
+        }
+        .footer{
+            margin-bottom: auto;
+        }
+    
+        .contactfieldset{
+            margin-left: none;
+        }
+    }
+
+
+
+
+    #agustinBoasso{
+        display: inline-block;
+        width: 220px;
+    }
+
+    .navbar{
+       margin-top: -45px;
+    }
+
+    #menuHam{
+        width :25px;
+        height: 25px;
+      
+        
+    }
+    
+.articleAlbum, .articleAlbum1, .articleAlbum2, .musicos, .articleAlbumGrito, .articleAlbumGrito2, .articleAlbumKharon, .articleAlbumKharon2, .articleAlbumVol1, .articleAlbumVol12{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin-left: 5%;
+    
+}
+
+.allright{
+    color: white;
+}
+
+.h2album{
+    color: white;
+}
+
+
+.bodyPatio{
+    grid-area: bodyPatio;
+}
+
+.bodyGrito{
+    grid-area: bodyGrito;
+}
+
+.bodyVol1{
+    grid-area: bodyVol1;
+}
+
+.bodyKharon{
+    grid-area: bodyKharon;
+}
+
+.articleAlbum{
+    grid-area: articleAlbum;
+}
+
+.patioPics{
+    grid-area: patioPics;
+}
+
+.musicos{
+    grid-area: musicos;
+}
+
+.articleAlbum1{
+    grid-area: articleAlbum1;
+}
+
+.articleAlbum2{
+    grid-area: articleAlbum2;
+}
+
+.articleAlbumGrito{
+    grid-area: articleGrito;
+}
+
+.articleAlbumGrito2{
+    grid-area: articleGrito2;
+}
+
+#musicGrito{
+    grid-area: musicGrito;
+}
+
+.h2album{
+    grid-area: h2album;
+}
+
+#musicKharon{
+    grid-area: musicKharon;
+}
+
+.articleAlbumKharon{
+    grid-area: articleKharon;
+}
+
+.articleAlbumKharon2{
+    grid-area: articleKharon2;
+}
+
+.h2albumKharon{
+    grid-area: h2albumk;
+}
+
+.h2albumKharon, .musicosVol1{
+    color: white;
+}
+
+.articleAlbumVol1{
+    grid-area: articleVol1;
+}
+
+
+.articleAlbumVol1{
+    grid-area: articleVol2;
+}
+
+.musicosVol1{
+    grid-area: musicosVol1;
+}
+
+.bodyPatio{
+  grid-area: bodyPatio;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10%  auto auto auto auto  5%;
+  grid-template-areas: "header header" "articleAlbum1 articleAlbum1" "musicos musicos"  "articleAlbum2 articleAlbum2" "patioPics patioPics"  "footer footer";
+}
+
+.bodyGrito{
+  grid-area: bodyGrito;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10%  auto auto auto 10%;
+  grid-template-areas: "header header" "articleGrito articleGrito"  "h2album h2album" "articleGrito2 articleGrito2" "musicGrito musicGrito" "footer footer";
+}
+
+#musicGrito, #musicKharon{
+    display: flex;
+    justify-content: center;
+}
+
+.bodyKharon{
+  grid-area: bodyKahron;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10%  auto auto auto auto 10%;
+  grid-template-areas: "header header" "articleKharon articleKharon"  "h2albumk h2albumk" "articleKharon2 articleKharon2" "musicKharon musicKharon" "footer footer";
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    
+    .bodyPatio{
+        grid-area: bodyPatio;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto;
+        grid-template-rows: 7% auto auto auto auto auto 5%;
+        grid-template-areas: "header" "nav" "articleAlbum1" "musicos" "articleAlbum2" "patioPics" "socialMedia" "footer";
+       
+      }
+
+
+    .bodyGrito{
+        grid-area: bodyGrito;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto;
+        grid-template-rows: 20% auto auto auto auto 5%;
+        grid-template-areas: "header" "articleGrito" "h2album" "articleGrito2" "musicGrito" "footer";
+    }  
+
+    
+    .bodyKharon{
+        grid-area: bodyKahron;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto;
+        grid-template-rows: 20%  auto auto auto auto 10%;
+        grid-template-areas: "header" "articleKharon"  "h2albumk" "articleKharon2" "musicKharon" "footer";
+      }
+
+
+     
+
+}
