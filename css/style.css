@@ -417,7 +417,7 @@ h2 {
   font-family: akira;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   #imageBio, #imageBio2, #articleBio1, #articleBio3, #articleBio4, .articleLinksBio {
     justify-content: center;
   }
@@ -491,7 +491,7 @@ h2 {
   justify-items: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .bodyAlbums {
     display: grid;
     grid-template-columns: auto;
@@ -512,7 +512,7 @@ h2 {
     justify-items: end;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .bodyAlbums {
     display: grid;
     grid-template-columns: auto auto;
@@ -644,7 +644,7 @@ h2 {
   grid-template-areas: "header header" "nav nav" "article1 article1" "article105 article105" "article2 article2" "article3 article3" "article4 article4" "socialMedia socialMedia" "footer footer";
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .bodyBio {
     grid-area: mainPics;
     display: grid;
@@ -654,7 +654,7 @@ h2 {
     grid-template-areas: "header" "nav" "article1" "article105" "article2" "article3" "article4" "socialMedia" "footer";
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .bodyBio {
     grid-area: mainPics;
     display: grid;
@@ -664,7 +664,7 @@ h2 {
     grid-template-areas: "header header" "nav nav" "article1 article1" "article105 article105" "article2 article2" "article3 article3" "article4 article4" "socialMedia socialMedia" "footer footer";
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .bodyBio {
     grid-area: mainPics;
     display: grid;
@@ -683,7 +683,7 @@ h2 {
   grid-template-areas: "header header" "videocarrusel videocarrusel" "socialMedia socialMedia" "footer footer";
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .bodyVideo {
     grid-area: bodyVideo;
     display: grid;
@@ -705,7 +705,7 @@ h2 {
   grid-template-areas: "header header" "contactform contactform" "contacto contacto" "socialMedia socialMedia" "footer footer";
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .bodyContact {
     grid-area: bodyContact;
     display: grid;
@@ -865,7 +865,7 @@ h2 {
   grid-template-areas: "header header" "articleKharon articleKharon" "h2albumk h2albumk" "articleKharon2 articleKharon2" "musicKharon musicKharon" "footer footer";
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .bodyPatio {
     grid-area: bodyPatio;
     display: grid;

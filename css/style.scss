@@ -87,7 +87,7 @@
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 768px){
     #imageBio, #imageBio2,#articleBio1, #articleBio3, #articleBio4,.articleLinksBio{
         justify-content: center;
     }
@@ -163,7 +163,7 @@
     justify-items: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 768px){
     
     .bodyAlbums{
     display: grid;
@@ -185,7 +185,7 @@
     }
 }
 
-    @media screen and (min-width: 1200px)   {
+    @media (min-width: 1200px)   {
 
         .bodyAlbums{
             display: grid;
@@ -328,7 +328,7 @@
  
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 768px){
     
     .bodyBio{
         grid-area: mainPics;
@@ -343,7 +343,7 @@
     
 }
 
-    @media screen and (min-width: 1200px)   {
+    @media  (min-width: 1200px)   {
         .bodyBio{
             grid-area: mainPics;
             display: grid;
@@ -355,7 +355,7 @@
           }
     }
 
-    @media screen and (min-width: 1200px){
+    @media (min-width: 1200px){
         .bodyBio{
             grid-area: mainPics;
             display: grid;
@@ -377,7 +377,7 @@
     grid-template-areas: "header header" "videocarrusel videocarrusel" "socialMedia socialMedia" "footer footer"
     }
    
-    @media screen and (min-width: 320px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
     
     .bodyVideo{    
     grid-area: bodyVideo;
@@ -407,7 +407,7 @@
 
 
 
-    @media screen and (min-width: 320px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
         .bodyContact{
             grid-area: bodyContact;
             display: grid;
@@ -578,7 +578,7 @@
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 768px){
     
     .bodyPatio{
         grid-area: bodyPatio;
